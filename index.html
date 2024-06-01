@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Movement Detection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Hand Movement Detection Using TensorFlow.js</h1>
+    <div id="info">
+        <p>This project uses a pre-trained machine learning model from TensorFlow.js to detect and track hand movements in real-time using your webcam. When you click "Start Detection," the application will request access to your webcam. Once granted, it will start processing the video feed and detecting hand movements.</p>
+        <img src="‪‪C:\Users\Asus1\Downloads\handdetect\hand.jpg" alt="Hand Detection Process" width="100" height="200"> 
+        <p>The detection process involves the following steps:</p>
+        <ul>
+            <li>The webcam captures live video and sends the frames to the TensorFlow.js model.</li>
+            <li>The model analyzes each frame to identify hand landmarks.</li>
+            <li>Detected hand landmarks are then drawn on the video feed in real-time, highlighting the detected hand positions.</li>
+        </ul>
+        <p>Applications of this technology include:</p>
+        <ul>
+            <li>Gesture-based control interfaces for computers and other devices.</li>
+            <li>Sign language recognition systems.</li>
+            <li>Interactive gaming where hand movements control gameplay.</li>
+            <li>Virtual reality (VR) and augmented reality (AR) applications.</li>
+        </ul>
+        <p>Click "Start Detection" to begin the process. Ensure you allow access to your webcam when prompted.</p>
+    </div>
+    <button id="startButton">Start Detection</button>
+    <button id="stopButton" style="display: none;">Stop Detection</button>
+    <div class="container">
+        <video id="video" width="640" height="480" autoplay></video>
+        <canvas id="canvas" width="640" height="480"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/handpose"></script>
+    <script src="script.js"></script>
+</body>
+</html>
